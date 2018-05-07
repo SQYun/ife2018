@@ -566,7 +566,7 @@ footer {
     display: flex;
     height: 410px;
     background-color: black;
-    padding:88px 226px 0 211px;
+    padding: 88px 226px 0 211px;
     bottom: 0;
 
 }
@@ -576,7 +576,8 @@ footer {
     text-align: center;
     color: #fff;
 }
-.f>ul>:first-child{
+
+.f > ul > :first-child {
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -586,7 +587,7 @@ footer {
     list-style-type: none;
 }
 
-.f>ul>li>a{
+.f > ul > li > a {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
@@ -595,22 +596,23 @@ footer {
 
 }
 
-.f>ul>li>a:first-letter{
+.f > ul > li > a:first-letter {
     text-transform: uppercase;
 }
-.icon{
+
+.icon {
     display: flex;
     padding-left: 0;
 }
 
-.icon>li{
+.icon > li {
     flex: 1;
     list-style-type: none;
     margin-top: 40px;
     cursor: pointer;
 }
 
-#f_4>ul>li:nth-child(2){
+#f_4 > ul > li:nth-child(2) {
     font-size: 18px;
     line-height: 28px;
 }
