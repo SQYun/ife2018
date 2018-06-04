@@ -1,0 +1,618 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+/*header部分*/
+header {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.firstLine {
+    width: 345px;
+    color: white;
+    font-size: 62px;
+    margin: 100px auto 86px auto;
+
+}
+
+.secondLine {
+    width: 836px;
+    color: white;
+    font-size: 22px;
+    font-weight: lighter;
+    line-height: 32px;
+    text-align: center;
+
+    margin: 0 auto;
+}
+
+.signUpForm {
+    width: 970px;
+    height: 250px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+
+    text-align: center;
+    margin: 106px auto 0 auto;
+}
+
+.accountTips {
+    text-transform: uppercase;
+}
+
+.firstTip {
+    font-size: 16px;
+    color: white;
+    line-height: 36px;
+}
+
+.secondTip {
+    font-size: 12px;
+    font-weight: lighter;
+    color: white;
+
+    margin-bottom: 46px;
+}
+
+.input {
+    width: 290px;
+    height: 48px;
+    padding: 0;
+    border: 1px solid white;
+    margin-right: 30px;
+    color: white;
+
+    background: transparent;
+}
+
+#signUp {
+    width: 125px;
+    height: 50px;
+    font-size: 12px;
+    color: white;
+    background-color: transparent;
+}
+
+#signUp:hover {
+    color: black;
+    background-color: white;
+}
+
+/*ready部分的css*/
+.ready {
+    width: 970;
+    height: 709px;
+    background-color: white;
+    font-family: "Times New Roman";
+
+    margin: 0 auto;
+    text-align: center;
+}
+
+.readyText1 {
+    font-size: 12px;
+    color: #141414;
+    text-transform: uppercase;
+
+    margin-top: 87px;
+}
+
+.readyText2 {
+    width: 657px;
+    font-size: 42px;
+    font-weight: lighter;
+    line-height: 52px;
+
+    margin: 45px auto;
+}
+
+.awesome {
+    width: 1080px;
+    margin: 0 auto;
+    margin-top: 94px;
+}
+
+.aUnit:nth-of-type(odd) {
+    margin-right: 180px;
+}
+
+.aUnit {
+    width: 420px;
+    float: left;
+    margin-bottom: 80px;
+
+    font-size: 0;
+}
+
+.aImg {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.aInformation {
+    width: 340px;
+    margin-left: 30px;
+    text-align: left;
+    display: inline-block;
+
+}
+
+.aTitle {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.aText {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.support {
+    width: 100%;
+    height: 797px;
+    background-image: url("../img/supportBackground.png");
+    background-size: cover;
+    -moz-background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+.sMain {
+    position: absolute;
+    top: 184px;
+    left: 316px;
+}
+
+.sTitle {
+    width: 383px;
+    font-size: 42px;
+    line-height: 52px;
+    color: white;
+}
+
+.sText {
+    width: 383px;
+    font-size: 18px;
+    line-height: 28px;
+    color: white;
+
+    margin-top: 48px;
+}
+
+.sButton {
+    margin-top: 56px;
+}
+
+.sBtn {
+    width: 240px;
+    height: 60px;
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+}
+
+.sBtn:hover {
+    background-color: white;
+    color: black;
+}
+
+.sBtn:first-of-type {
+    margin-right: 22px;
+}
+
+/*product*/
+.pTitle {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 42px;
+    line-height: 52px;
+
+    margin-top: 100px;
+}
+
+.pParagragh {
+    display: flex;
+    width: 960px;
+    margin: 89px auto 80px auto;
+
+}
+
+.pSection {
+    flex: 0 0 268px;
+    /*width: 268px;*/
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.pTextTitle {
+    text-align: center;
+}
+
+/*此处hyphens属性是css3，谷歌不支持该属性，该属性使英文单词换行时会有连字符’-‘*/
+.pText {
+    text-align: center;
+
+    margin-top: 40px;
+
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: lighter;
+}
+
+.product:after {
+    display: block;
+    content: ' ';
+    width: 100%;
+    border-bottom: 1px solid gray;
+    margin-bottom: 114px;
+}
+
+.detail {
+    width: 970px;
+    margin: 0 auto 105px auto;
+}
+
+.dPhoto {
+    display: inline-block;
+    width: 570px;
+    height: 350px;
+    margin-right: 75px;
+
+    background: url("../img/detail.png") no-repeat;
+    background-size: cover;
+}
+
+.dInformation:last-child {
+    margin-top: 80px;
+}
+
+.dText {
+    display: inline-block;
+    width: 310px;
+    text-align: left;
+    vertical-align: top;
+
+    padding-top: 50px;
+}
+
+.dTitle {
+    font-size: 20px;
+    line-height: 32px;
+
+}
+
+.dText2 {
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 30px;
+}
+
+.dPhoto2 {
+    margin: 0 0 0 75px;
+    background: url("../img/detail2.png") no-repeat;
+}
+
+.line {
+    display: block;
+    content: ' ';
+    width: 100%;
+    border-bottom: 1px solid gray;
+    margin-bottom: 100px;
+}
+
+.crew {
+    width: 970px;
+
+    margin: 0 auto;
+    text-align: center;
+    font-weight: lighter;
+    margin-bottom: 100px;
+}
+
+.crewTitle {
+    font-size: 42px;
+    /*line-height: 52px;*/
+}
+
+.crewText {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 100;
+
+    margin-top: 35px;
+    margin-bottom: 65px;
+}
+
+.photo {
+    font-size: 0;
+}
+
+.crewPhoto {
+    width: 470px;
+    height: 340px;
+
+    font-size: 0px;
+    display: inline-block;
+}
+
+.crewPhoto:nth-child(odd) {
+    margin-right: 30px;
+}
+
+.crewPhoto1 {
+    background: url("../img/people1.png") no-repeat;
+    background-size: cover;
+}
+
+.crewPhoto2 {
+    background: url("../img/people2.png") no-repeat;
+    background-size: cover;
+}
+
+.crewPhoto3 {
+    background: url("../img/people3.png") no-repeat;
+    background-size: cover;
+
+    margin-top: 30px;
+}
+
+.crewPhoto4 {
+    background: url("../img/people4.png") no-repeat;
+    background-size: cover;
+    margin-top: 30px;
+}
+
+.crewPhoto:hover .user {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.user {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: none;
+    z-index: 2;
+    background: #000000;
+    opacity: 0.6;
+    vertical-align: bottom;
+}
+
+.userName {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 110px;
+}
+
+.userDetail {
+    font-size: 12px;
+
+    margin-top: 21px;
+    text-transform: uppercase;
+}
+
+div.socialBtn {
+    display: inline-block;
+    margin-top: 39px;
+}
+
+.facebook {
+    width: 51px;
+    height: 54px;
+
+    opacity: 0.6;
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 30px;
+
+    background: url("../img/facebook.png") no-repeat;
+    background-size: auto;
+    background-position: center center;
+    background-origin: content-box;
+
+}
+
+.twitter {
+    width: 51px;
+    height: 54px;
+
+    opacity: 0.6;
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 30px;
+
+    background: url("../img/twitter.png") no-repeat;
+    background-size: auto;
+    background-position: center center;
+    background-origin: content-box;
+}
+
+.instagram {
+    width: 51px;
+    height: 54px;
+
+    opacity: 0.6;
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 30px;
+
+    background: url("../img/instagram.png") no-repeat;
+    background-size: auto;
+    background-position: center center;
+    background-origin: content-box;
+}
+
+/*sendForm*/
+.contact {
+    width: 976px;
+
+    margin: 70px auto 0 auto;
+
+}
+
+#sendForm {
+    display: inline-block;
+    width: 470px;
+    border: 1px solid gray;
+    margin-right: 130px;
+    text-align: center;
+}
+
+.fTitle {
+    font-size: 16px;
+
+    margin: 50px 0 50px 0;
+}
+
+.formText {
+    width: 370px;
+    height: 50px;
+    border: 1px solid gray;
+
+    background: transparent;
+    margin-bottom: 30px;
+}
+
+textarea {
+    width: 370px;
+    height: 140px;
+}
+
+#formButton {
+    display: block;
+    width: 377px;
+    height: 50px;
+    border: 0;
+    padding: 0;
+    margin: 30px auto 65px auto;
+
+    background-color: black;
+    color: white;
+}
+
+#formButton:hover {
+    cursor: pointer;
+}
+
+.contacts {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.ctTitle {
+    font-size: 42px;
+    line-height: 42px;
+    color: #000;
+    margin-top: 88px;
+    margin-bottom: 40px;
+}
+
+.ctText {
+    width: 369px;
+    height: 100px;
+    margin-bottom: 40px;
+
+    font-size: 16px;
+    line-height: 26px;
+    font-family: "Times New Roman";
+    font-weight: lighter;
+}
+
+.ctLocation {
+    font-size: 16px;
+    line-height: 26px;
+    vertical-align: middle;
+}
+
+.ctLocation div {
+    display: inline-block;
+    vertical-align: top;
+    font-family: Montserrat;
+}
+
+.contacts img {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.contacts > div {
+    margin-bottom: 40px;
+}
+
+/*footer样式*/
+footer {
+    display: flex;
+    height: 410px;
+    background-color: black;
+    padding: 88px 226px 0 211px;
+    bottom: 0;
+
+}
+
+.f {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+}
+
+.f > ul > :first-child {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.f > ul > li {
+    text-align: left;
+    list-style-type: none;
+}
+
+.f > ul > li > a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 46px;
+
+}
+
+.f > ul > li > a:first-letter {
+    text-transform: uppercase;
+}
+
+.icon {
+    display: flex;
+    padding-left: 0;
+}
+
+.icon > li {
+    flex: 1;
+    list-style-type: none;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+#f_4 > ul > li:nth-child(2) {
+    font-size: 18px;
+    line-height: 28px;
+}

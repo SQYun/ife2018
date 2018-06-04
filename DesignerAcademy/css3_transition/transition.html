@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一个简单的transition</title>
+    <!--<link rel="stylesheet" type="text/css" href="./transition.css"/>-->
+    <style>
+        html，body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .wrapper {
+            width: 200px;
+            height: 50px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text {
+            width: 72px;
+            color: black;
+            font-family: '微软雅黑';
+
+            -webkit-transition: color 2s;
+            -moz-transition: color 2s;
+            -ms-transition: color 2s;
+            -o-transition: color 2s;
+            transition: color 2s;
+        }
+        .line{
+            width: 72px;
+
+            position: relative;
+        }
+
+        .lineChild{
+            width: 0px;
+            height: 2px;
+            background-color: blue;
+
+            position: absolute;
+            top: 0;
+            left: 50%;
+            -webkit-transition: all 2s;
+            -moz-transition: all 2s;
+            -ms-transition: all 2s;
+            -o-transition: all 2s;
+            transition: all 2s;
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="text">前端学院</div>
+    <div class="line"><div class="lineChild"></div></div>
+    <input id="toggle" type="button" value="切换样式"/>
+</div>
+<script>
+    (function () {
+        function addHandler(element, type, handler) {
+            if (element.addEventListener) {
+                element.addEventListener(type, handler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent("on" + type, handler);
+            } else {
+                element['on' + type] = handler;
+            }
+        };
+
+        var toggle = document.getElementById('toggle');
+        var text = document.getElementsByClassName('text')[0];
+        var lineChild = document.getElementsByClassName('lineChild')[0];
+
+        addHandler(toggle, 'click', function () {
+            if (text.style.color === 'blue') {
+                text.style.color = 'black';
+                lineChild.style.width=0+'px';
+                lineChild.style.left = '50%'
+            }else{
+                text.style.color = 'blue';
+                lineChild.style.width=72+'px';
+                lineChild.style.left = '0'
+
+            }
+        })
+    })();
+
+
+</script>
+</body>
+</html>

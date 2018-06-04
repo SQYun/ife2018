@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+</head>
+<body>
+<input id="first-number" type="number" value="0" placeholder="第一个数字">
+<input id="second-number" type="number" value="0" placeholder="第二个数字">
+<button id="add-btn">加</button>
+<button id="minus-btn">减</button>
+<button id="times-btn">乘</button>
+<button id="divide-btn">除</button>
+<p id="result">运算结果</p>
+<script>
+    (function () {
+
+        var addBtn = document.querySelector('#add-btn');
+        var minusBtn = document.querySelector('#minus-btn');
+        var timesBtn = document.querySelector('#times-btn');
+        var divideBtn = document.querySelector('#divide-btn');
+        var result = document.querySelector('#result');
+
+
+        var EventUtil = {
+
+            addHandler: function (element, type, handler) {
+                if (element.addEventListener) {
+                    element.addEventListener(type, handler, false);
+                } else if (element.attachEvent) {
+                    element.attachEvent("on" + type, handler);
+                } else {
+                    element["on" + type] = handler;
+                }
+            },
+            getEvent: function (event) {
+                return event ? event : window.event;
+            },
+            getTarget: function (event) {
+                return event.target || event.srcElement;
+            }
+        };
+        //  方法1：  使用事件委托方法
+
+        var form = document.querySelector('body');
+        EventUtil.addHandler(form, 'click', function (event) {
+            event = EventUtil.getEvent(event);
+            var target = EventUtil.getTarget(event),
+                firstNumber = parseInt(document.querySelector('#first-number').value, 10),
+                secondNumber = parseInt(document.querySelector('#second-number').value, 10),
+                Num = 0;
+            console.log(target);
+
+            switch (target.id) {
+                case 'add-btn':
+                    Num = firstNumber + secondNumber;
+                    result.innerText = "运算结果：" + Num;
+                    break;
+                case  'minus-btn':
+                    Num = firstNumber - secondNumber;
+                    result.innerText = "运算结果：" + Num;
+                    break;
+                case  'times-btn':
+                    Num = firstNumber * secondNumber;
+                    result.innerText = "运算结果：" + Num;
+                    break;
+                case  'divide-btn':
+                    Num = firstNumber / secondNumber;
+                    result.innerText = "运算结果：" + Num;
+                    break;
+
+            }
+        });
+
+
+        //
+        //方法2: 每一个都增添监听函数
+        //
+        //事件监听函数
+        // function addEventHandler(ele, event, handler) {
+        //     if (ele.addEventListener) {
+        //         ele.addEventListener(event, hanlder, false);
+        //     } else if (ele.attachEvent) {
+        //         ele.attachEvent("on" + event, hanlder);
+        //     } else {
+        //         ele["on" + event] = hanlder;
+        //     }
+        // }
+        //加
+        //     addEventHandler(addBtn,'click',function () {
+        // var firstNumber = parseInt(document.querySelector('#first-number').value, 10);
+        // var secondNumber = parseInt(document.querySelector('#second-number').value, 10);
+        // var addNum = firstNumber + secondNumber;
+        // result.innerText = "运算结果：" + addNum;
+        //     });
+        //
+        //     //减
+        //     addEventHandler(minusBtn,'click',function () {
+        //         var firstNumber = parseInt(document.querySelector('#first-number').value,10);
+        //         var secondNumber = parseInt(document.querySelector('#second-number').value,10);
+        //         var addNum = firstNumber - secondNumber;
+        //         result.innerText = "运算结果："+addNum;
+        //     });
+        //
+        //     //乘
+        //     addEventHandler(timesBtn,'click',function () {
+        //         var firstNumber = parseInt(document.querySelector('#first-number').value,10);
+        //         var secondNumber = parseInt(document.querySelector('#second-number').value,10);
+        //         var addNum = firstNumber * secondNumber;
+        //         result.innerText = "运算结果："+addNum;
+        //     });
+        //
+        //     //除
+        //     addEventHandler(divideBtn,'click',function () {
+        //         var firstNumber = parseInt(document.querySelector('#first-number').value,10);
+        //         var secondNumber = parseInt(document.querySelector('#second-number').value,10);
+        //         var addNum = firstNumber / secondNumber;
+        //         result.innerText = "运算结果："+addNum;
+        // });
+    })();
+</script>
+</body>
+</html>
